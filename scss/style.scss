@@ -63,6 +63,7 @@ font-family: 'Nata Sans', sans-serif;
 		width: 40px;
 		height: 30px;
 		cursor: pointer;
+		z-index: 2;
 		@media (max-width: 600px) {
 			display: flex;
 		}
@@ -81,7 +82,19 @@ font-family: 'Nata Sans', sans-serif;
 			column-gap: 40px;
 			@media (max-width: 900px) {
 				column-gap: 32px;
-				
+			}
+			@media (max-width: 600px) {
+				position: fixed;
+				top: 0;
+				right: 0;
+				height: 100vh;
+				width: 75%;
+				background-color: rgb(209, 177, 111);
+				flex-direction: column;
+				gap: 32px;
+				padding-top: 110px;
+				padding-left: 14px;
+				box-shadow: -4px 0px 8px 0px #0000001a;
 			}
 		}
 
@@ -92,6 +105,9 @@ font-family: 'Nata Sans', sans-serif;
 		color:#593619;
 		font-size: 18px;
 		font-weight: 600;
+		@media (max-width: 600px) {
+			font-size: 28px;
+		}
 		&:hover{
 			color: #5936199e;
 		}
@@ -112,10 +128,8 @@ font-family: 'Nata Sans', sans-serif;
 		}
 
 		&__title {
-			font-size: 24px;
+			font-size: 20px;
 			font-weight: 500;
-
-			
 		}
 
 		&__text {
