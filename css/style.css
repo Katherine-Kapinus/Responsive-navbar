@@ -77,6 +77,9 @@ body {
   color: #593619;
   font-family: "Nata Sans", sans-serif;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 [class*=container] {
   max-width: 1170px;
@@ -108,6 +111,11 @@ body {
   padding-block: 28px;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .header__container {
+    padding-block: 14px;
+  }
+}
 .header__title {
   font-size: 32px;
   font-weight: 500;
@@ -115,12 +123,20 @@ body {
 .header__title a {
   color: #593619;
 }
+@media (max-width: 600px) {
+  .header__title {
+    width: 1ch;
+    overflow: hidden;
+    font-size: 52px;
+    font-weight: 700;
+  }
+}
 .navbar {
   position: relative;
 }
 .navbar__burger {
   position: absolute;
-  top: -14px;
+  top: -12px;
   right: 0;
   display: none;
   flex-direction: column;
