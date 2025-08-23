@@ -233,6 +233,7 @@ body.no-scroll {
 
 .tabs__container {
   background-color: #f8f4b6;
+  padding: 0;
 }
 
 .item-tabs {
@@ -253,11 +254,16 @@ body.no-scroll {
 }
 
 .tabs-content__body {
-  padding: 12px 20px;
+  padding: 20px 15px;
   display: none;
 }
 .tabs-content__body.active {
   display: block;
+}
+@media (min-width: 768px) {
+  .tabs-content__body {
+    padding: 12px 20px;
+  }
 }
 .tabs-content__title {
   font-size: 22px;

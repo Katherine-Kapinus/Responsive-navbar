@@ -6,7 +6,7 @@
 body{
     background-color: $color-bg;
 	color: $color-main;
-font-family: 'Nata Sans', sans-serif;
+	font-family: 'Nata Sans', sans-serif;
 	&.no-scroll {
 	overflow: hidden;
 	}
@@ -172,6 +172,7 @@ font-family: 'Nata Sans', sans-serif;
 
 		&__container {
 			background-color: $color-bg-2;
+			padding: 0;
 		}
 }
 .item-tabs {
@@ -193,10 +194,13 @@ font-family: 'Nata Sans', sans-serif;
 .tabs-content {
 
 		&__body {
-			padding: 12px 20px;
+			padding: 20px 15px;
 			display: none;
 			&.active{
 				display: block;
+			}
+			@media(min-width: 768px){
+				padding: 12px 20px;
 			}
 		}
 
