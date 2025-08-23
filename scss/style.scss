@@ -1,5 +1,7 @@
 @import 'nullstyle';
 
+
+//- general styles
 body{
     background-color: #f7face85;
 	color: #593619;
@@ -32,6 +34,9 @@ font-family: 'Nata Sans', sans-serif;
     }    
 }
 
+
+
+//- header styles
 .header {
 
 	background-color: rgba(243, 232, 151, 0.81);
@@ -60,8 +65,6 @@ font-family: 'Nata Sans', sans-serif;
 			
 		}
 
-		&__navbar {
-		}
 }
 .navbar {
 	position: relative;
@@ -124,9 +127,6 @@ font-family: 'Nata Sans', sans-serif;
 			}
 		}
 
-		&__item {
-		}
-
 		&__link {
 		color:#593619;
 		font-size: 18px;
@@ -144,6 +144,10 @@ font-family: 'Nata Sans', sans-serif;
 
 		}
 }
+
+
+
+//-section header styles
 .main {
 
 		&__container {
@@ -158,6 +162,7 @@ font-family: 'Nata Sans', sans-serif;
 			font-weight: 500;
 		}
 
-		&__text {
-		}
 }
+
+
+//- tabs section styles
