@@ -62,7 +62,7 @@ body{
 			@media (max-width: 600px) {
 				width: 1ch;
 				overflow: hidden;
-				font-size: 52px;
+				font-size: 48px;
 				font-weight: 700;
 			}
 			
@@ -186,6 +186,9 @@ body{
 			flex: 1 1 33.333%;
 			text-align: center;
 			cursor: pointer;
+			&:hover{
+				background-color: #e2d89a;
+			}
 			&.active{
 				background-color: $color-bg-2;
 			}
