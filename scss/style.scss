@@ -172,7 +172,6 @@ font-family: 'Nata Sans', sans-serif;
 
 		&__container {
 			background-color: $color-bg-2;
-			margin-block: 28px;
 		}
 }
 .item-tabs {
@@ -194,7 +193,7 @@ font-family: 'Nata Sans', sans-serif;
 .tabs-content {
 
 		&__body {
-			margin: 12px 20px;
+			padding: 12px 20px;
 			display: none;
 			&.active{
 				display: block;

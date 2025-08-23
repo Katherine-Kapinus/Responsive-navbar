@@ -72,6 +72,10 @@ a, *::before, *::after {
   display: inline-block;
 }
 
+section {
+  margin-block: 28px;
+}
+
 body {
   background-color: rgba(247, 250, 206, 0.5215686275);
   color: #593619;
@@ -229,7 +233,6 @@ body.no-scroll {
 
 .tabs__container {
   background-color: #f8f4b6;
-  margin-block: 28px;
 }
 
 .item-tabs {
@@ -250,7 +253,7 @@ body.no-scroll {
 }
 
 .tabs-content__body {
-  margin: 12px 20px;
+  padding: 12px 20px;
   display: none;
 }
 .tabs-content__body.active {
