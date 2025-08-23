@@ -84,6 +84,7 @@ body.no-scroll {
 [class*=container] {
   max-width: 1170px;
   margin: 0 auto;
+  padding-block: 28px;
 }
 
 @media (max-width: 1200.98px) {
@@ -108,7 +109,6 @@ body.no-scroll {
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding-block: 28px;
   align-items: center;
 }
 @media (max-width: 600px) {
@@ -223,6 +223,19 @@ body.no-scroll {
   gap: 14px;
 }
 .main__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.item-tabs__title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.tabs-content__body {
+  margin-block: 16px;
+}
+.tabs-content__title {
   font-size: 20px;
   font-weight: 500;
 }

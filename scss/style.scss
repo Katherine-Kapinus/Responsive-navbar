@@ -3,8 +3,8 @@
 
 //- general styles
 body{
-    background-color: #f7face85;
-	color: #593619;
+    background-color: $color-bg;
+	color: $color-main;
 font-family: 'Nata Sans', sans-serif;
 	&.no-scroll {
 	overflow: hidden;
@@ -14,6 +14,8 @@ font-family: 'Nata Sans', sans-serif;
 [class*= 'container'] {
     max-width: 1170px;
     margin: 0 auto;
+	padding-block: 28px;
+
 }
 
 @media (max-width: 1200.98px) {
@@ -39,11 +41,10 @@ font-family: 'Nata Sans', sans-serif;
 //- header styles
 .header {
 
-	background-color: rgba(243, 232, 151, 0.81);
+	background-color: $color-header-bg;
 	&__container{
 		display: flex;
 		justify-content: space-between;
-		padding-block: 28px;
 		align-items: center;
 		@media (max-width: 600px) {
 			padding-block: 14px;
@@ -54,7 +55,7 @@ font-family: 'Nata Sans', sans-serif;
 			font-size: 32px;
 			font-weight: 500;
 			& a{
-				color: #593619;
+				color: $color-main;
 			}
 			@media (max-width: 600px) {
 				width: 1ch;
@@ -95,7 +96,7 @@ font-family: 'Nata Sans', sans-serif;
 	&__bar{
 		height: 4px;
 		width: 100%;
-		background-color: #593619;
+		background-color: $color-main;
 		border-radius: 2px;
 
 	}
@@ -115,12 +116,12 @@ font-family: 'Nata Sans', sans-serif;
     			transform: translateX(100%);
 				height: 100vh;
 				width: 75%;
-				background-color: rgb(209, 177, 111);
+				background-color: $color-navbar-bg;
 				flex-direction: column;
 				gap: 32px;
 				padding-top: 110px;
 				padding-left: 14px;
-				box-shadow: -4px 0px 8px 0px #0000001a;
+				box-shadow: -4px 0px 8px 0px #000;
 				&.active{
 					transform: translateX(0);
 				}
@@ -128,20 +129,19 @@ font-family: 'Nata Sans', sans-serif;
 		}
 
 		&__link {
-		color:#593619;
-		font-size: 18px;
-		font-weight: 600;
-		@media (max-width: 600px) {
-			font-size: 28px;
-		}
-		&:hover{
-			color: #5936199e;
-		}
-		&:active{
-			scale: 0.98;
-			color: #73a613;
-		}
-
+			color: $color-main;
+			font-size: 18px;
+			font-weight: 600;
+			@media (max-width: 600px) {
+				font-size: 28px;
+			}
+			&:hover{
+				color: $color-hover;
+			}
+			&:active{
+				scale: 0.98;
+				color: $color-accent;
+			}
 		}
 }
 
@@ -166,3 +166,36 @@ font-family: 'Nata Sans', sans-serif;
 
 
 //- tabs section styles
+.tabs {
+
+		&__container {
+		}
+
+		&__items {
+		}
+
+		&__content {
+		}
+}
+.item-tabs {
+
+		&__title {
+			font-size: 22px;
+			font-weight: 500;
+		}
+}
+.tabs-content {
+
+		&__body {
+			margin-block: 16px;
+		}
+
+		&__title {
+			font-size: 20px;
+			font-weight: 500;
+		}
+
+		&__text {
+		}
+}
+
