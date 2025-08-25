@@ -320,7 +320,7 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 10px;
+  padding: 16px 10px;
 }
 .accordion__header span {
   font-size: 22px;

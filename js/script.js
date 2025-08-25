@@ -29,8 +29,20 @@ let accordionContent = document.querySelectorAll('.accordion__content');
 let icon = document.querySelectorAll('.icon-plus');
 accordionHeader.forEach((header, index) => {
     header.addEventListener('click', () => {
-        accordionContent[index].classList.toggle('active');
-        icon[index].classList.toggle('active');
-    })
+
+        let isActive = accordionContent[index].classList.contains('active');
+
+        accordionContent.forEach((item) => {
+            item.classList.remove('active');
+        });
+        icon.forEach((ic) => {
+            ic.classList.remove('active');
+        });
+
+        if (!isActive) {
+            accordionContent[index].classList.add('active');
+            icon[index].classList.add('active');
+        };
+    });
 });
 
