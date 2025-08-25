@@ -26,10 +26,11 @@ tabs.forEach((tab, index) => {
 
 let accordionHeader = document.querySelectorAll('.accordion__header');
 let accordionContent = document.querySelectorAll('.accordion__content');
+let icon = document.querySelectorAll('.icon-plus');
 accordionHeader.forEach((header, index) => {
     header.addEventListener('click', () => {
         accordionContent[index].classList.toggle('active');
-        accordionHeader[index].classList.toggle('active');
+        icon[index].classList.toggle('active');
     })
 });
 

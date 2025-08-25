@@ -327,7 +327,18 @@ body.no-scroll {
   font-weight: 600;
 }
 .accordion__content {
+  display: none;
   padding-top: 6px;
   background-color: #f1e79a;
   padding: 6px 10px;
+}
+.accordion__content.active {
+  display: block;
+}
+
+.icon-plus {
+  transition: transform 0.2s ease-in-out;
+}
+.icon-plus.active {
+  transform: rotate(45deg);
 }
