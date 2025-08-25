@@ -7,9 +7,9 @@ burger.addEventListener('click', () => {
     document.body.classList.toggle('no-scroll');
 });
 
+
 let tabs = document.querySelectorAll('.item-tabs__title');
 let tabsContents = document.querySelectorAll('.tabs-content__body');
-console.log(tabs, tabsContents);
 tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
         tabsContents.forEach((content) => {
@@ -22,3 +22,14 @@ tabs.forEach((tab, index) => {
         tabs[index].classList.add('active');
     })
 })
+
+
+let accordionHeader = document.querySelectorAll('.accordion__header');
+let accordionContent = document.querySelectorAll('.accordion__content');
+accordionHeader.forEach((header, index) => {
+    header.addEventListener('click', () => {
+        accordionContent[index].classList.toggle('active');
+        accordionHeader[index].classList.toggle('active');
+    })
+});
+

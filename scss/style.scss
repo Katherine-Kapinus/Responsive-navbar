@@ -17,7 +17,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
+//   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -253,4 +253,51 @@ body{
 		&__text {
 		}
 }
+
+// - acordion section styles
+
+.accordion {
+
+		&__container {
+			background-color: $color-bg-2;
+			padding: 16px 20px;
+			// @media(min-width: 768px){
+			// 	padding: 16px 20px;
+			// }
+		}
+
+		&__item {
+			&:not(:last-child){
+				margin-bottom: 16px;
+			}
+		}
+		
+		&__input {
+			display: none;
+			appearance: none;
+			
+		}
+		
+		&__header {
+			background-color: $color-navbar-bg;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 6px 10px;
+			& span{
+					font-size: 22px;
+					font-weight: 600;
+			}
+		}
+
+		&__content {
+			padding-top: 6px;
+			background-color: $color-header-bg;
+			padding: 6px 10px;
+
+		}
+}
+.icon-plus {
+}
+
 
