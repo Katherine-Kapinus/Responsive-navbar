@@ -121,15 +121,22 @@ body{
 		z-index: 2;
 		@media (max-width: 600px) {
 			display: flex;
+			&.active{
+				position: fixed;
+				top: 27px;
+				right: 15px;
+			}
 		}
-		&.active .navbar__bar:nth-child(1){
-			transform: rotate(45deg) translate(8px, 8px);
-		}
-		&.active .navbar__bar:nth-child(2){
-			opacity: 0;
-		}
-		&.active .navbar__bar:nth-child(3){
-			transform: rotate(-45deg) translate(9px, -10px);
+		&.active {
+			.navbar__bar:nth-child(1) {
+				transform: rotate(45deg) translate(8px, 8px);
+			}
+			.navbar__bar:nth-child(2) {
+				opacity: 0;
+			}
+			.navbar__bar:nth-child(3) {
+				transform: rotate(-45deg) translate(9px, -10px);
+			}
 		}
 	}
 	&__bar{

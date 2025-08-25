@@ -184,6 +184,11 @@ body.no-scroll {
   .navbar__burger {
     display: flex;
   }
+  .navbar__burger.active {
+    position: fixed;
+    top: 27px;
+    right: 15px;
+  }
 }
 .navbar__burger.active .navbar__bar:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
