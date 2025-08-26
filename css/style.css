@@ -76,6 +76,101 @@ section {
   margin-block: 28px;
 }
 
+.accordion__container {
+  background-color: #f8f4b6;
+  padding: 16px 20px;
+}
+.accordion__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.accordion__input {
+  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.accordion__header {
+  background-color: #d1b16f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.accordion__header:hover {
+  scale: 1.01;
+  background-color: rgba(209, 176, 111, 0.7058823529);
+}
+.accordion__header:active {
+  scale: 0.99;
+}
+.accordion__header span {
+  font-size: 22px;
+  font-weight: 600;
+}
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 8px;
+  background-color: #f1e79a;
+  transition: all 0.7s ease-in-out;
+}
+.accordion__content.active {
+  max-height: 500px;
+  padding: 6px 10px;
+}
+
+.icon-plus {
+  transition: transform 0.5s ease-in-out;
+}
+.icon-plus.active {
+  transform: rotate(315deg);
+  color: rgba(247, 250, 206, 0.5215686275);
+}
+
+.tabs__container {
+  background-color: #f8f4b6;
+  padding: 0;
+}
+
+.item-tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1e79a;
+}
+.item-tabs__title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-block: 16px;
+  flex: 1 1 33.333%;
+  text-align: center;
+  cursor: pointer;
+}
+.item-tabs__title:hover {
+  background-color: #e2d89a;
+}
+.item-tabs__title.active {
+  background-color: #f8f4b6;
+}
+
+.tabs-content__body {
+  padding: 20px 15px;
+  display: none;
+}
+.tabs-content__body.active {
+  display: block;
+}
+@media (min-width: 768px) {
+  .tabs-content__body {
+    padding: 12px 20px;
+  }
+}
+.tabs-content__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?d6sz2t");
@@ -178,7 +273,7 @@ body.no-scroll {
   width: 40px;
   height: 30px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 11;
 }
 @media (max-width: 600px) {
   .navbar__burger {
@@ -220,6 +315,7 @@ body.no-scroll {
 @media (max-width: 600px) {
   .navbar__items {
     position: fixed;
+    z-index: 10;
     top: 0;
     right: 0;
     transform: translateX(100%);
@@ -263,96 +359,4 @@ body.no-scroll {
 .main__title {
   font-size: 20px;
   font-weight: 500;
-}
-
-.tabs__container {
-  background-color: #f8f4b6;
-  padding: 0;
-}
-
-.item-tabs {
-  display: flex;
-  justify-content: space-around;
-  background-color: #f1e79a;
-}
-.item-tabs__title {
-  font-size: 20px;
-  font-weight: 600;
-  padding-block: 16px;
-  flex: 1 1 33.333%;
-  text-align: center;
-  cursor: pointer;
-}
-.item-tabs__title:hover {
-  background-color: #e2d89a;
-}
-.item-tabs__title.active {
-  background-color: #f8f4b6;
-}
-
-.tabs-content__body {
-  padding: 20px 15px;
-  display: none;
-}
-.tabs-content__body.active {
-  display: block;
-}
-@media (min-width: 768px) {
-  .tabs-content__body {
-    padding: 12px 20px;
-  }
-}
-.tabs-content__title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.accordion__container {
-  background-color: #f8f4b6;
-  padding: 16px 20px;
-}
-.accordion__item:not(:last-child) {
-  margin-bottom: 16px;
-}
-.accordion__input {
-  display: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-.accordion__header {
-  background-color: #d1b16f;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 10px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-.accordion__header:hover {
-  scale: 1.01;
-  background-color: rgba(209, 176, 111, 0.7058823529);
-}
-.accordion__header span {
-  font-size: 22px;
-  font-weight: 600;
-}
-.accordion__content {
-  max-height: 0;
-  overflow: hidden;
-  padding-top: 8px;
-  background-color: #f1e79a;
-  transition: all 0.7s ease-in-out;
-}
-.accordion__content.active {
-  max-height: 500px;
-  padding: 6px 10px;
-}
-
-.icon-plus {
-  transition: transform 0.5s ease-in-out;
-}
-.icon-plus.active {
-  transform: rotate(315deg);
-  color: rgba(247, 250, 206, 0.5215686275);
 }

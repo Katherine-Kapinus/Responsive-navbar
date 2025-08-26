@@ -1,0 +1,66 @@
+
+// - acordion section styles
+
+.accordion {
+
+		&__container {
+			background-color: $color-bg-2;
+			padding: 16px 20px;
+		}
+
+		&__item {
+			
+			&:not(:last-child){
+				margin-bottom: 16px;
+			}
+		}
+		
+		&__input {
+			display: none;
+			appearance: none;
+			
+		}
+		
+		&__header {
+			background-color: $color-navbar-bg;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 16px 10px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			&:hover{
+				scale: 1.01;
+				background-color: $color-navbar-bg-hover;
+			}
+			&:active{
+				scale: 0.99;
+			}
+			
+			& span{
+					font-size: 22px;
+					font-weight: 600;
+			}
+		}
+
+		&__content {
+			max-height: 0;
+			overflow: hidden;
+			padding-top: 8px;
+			background-color: $color-header-bg;
+			transition: all 0.7s ease-in-out;
+			&.active{
+				max-height: 500px;
+				padding: 6px 10px;
+			}
+		}
+}
+.icon-plus {
+	transition: transform 0.5s ease-in-out;
+	&.active{
+		transform: rotate(315deg);
+		color: $color-bg;
+	}
+}
+
+
