@@ -326,24 +326,33 @@ body.no-scroll {
   justify-content: space-between;
   align-items: center;
   padding: 16px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.accordion__header:hover {
+  scale: 1.01;
+  background-color: rgba(209, 176, 111, 0.7058823529);
 }
 .accordion__header span {
   font-size: 22px;
   font-weight: 600;
 }
 .accordion__content {
-  display: none;
-  padding-top: 6px;
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 8px;
   background-color: #f1e79a;
-  padding: 6px 10px;
+  transition: all 0.7s ease-in-out;
 }
 .accordion__content.active {
-  display: block;
+  max-height: 500px;
+  padding: 6px 10px;
 }
 
 .icon-plus {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .icon-plus.active {
-  transform: rotate(45deg);
+  transform: rotate(315deg);
+  color: rgba(247, 250, 206, 0.5215686275);
 }
