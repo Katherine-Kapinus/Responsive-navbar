@@ -6,6 +6,9 @@
 		&__container {
 			background-color: $color-bg-2;
 			padding: 16px 20px;
+			@media (max-width: 600px) {
+				padding: 16px 20px;
+			}
 		}
 
 		&__item {
@@ -50,7 +53,7 @@
 			background-color: $color-header-bg;
 			transition: all 0.7s ease-in-out;
 			&.active{
-				max-height: 500px;
+				max-height: 1000px;
 				padding: 6px 10px;
 			}
 		}

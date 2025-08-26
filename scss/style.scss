@@ -69,9 +69,15 @@ body{
         max-width: 750.98px;
     }    
 }
+
 @media (max-width: 767.98px) {
-    [class*= 'container'] {
-        max-width: none;
+	[class*= 'container'] {
+		max-width: none;
+	}    
+}
+
+@media (max-width: 767.98px) {
+    [class*= 'container-full'] {
         padding: 0 15px;
     }    
 }
