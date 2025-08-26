@@ -1,4 +1,4 @@
-
+//- burger icon animation
 const burger = document.querySelector('.navbar__burger');
 const items = document.querySelector('.navbar__items');   
 burger.addEventListener('click', () => {
@@ -8,6 +8,7 @@ burger.addEventListener('click', () => {
 });
 
 
+//- tabs logic
 let tabs = document.querySelectorAll('.item-tabs__title');
 let tabsContents = document.querySelectorAll('.tabs-content__body');
 tabs.forEach((tab, index) => {
@@ -24,6 +25,7 @@ tabs.forEach((tab, index) => {
 })
 
 
+//- accordion logic
 let accordionHeader = document.querySelectorAll('.accordion__header');
 let accordionContent = document.querySelectorAll('.accordion__content');
 let icon = document.querySelectorAll('.icon-plus');
@@ -45,4 +47,30 @@ accordionHeader.forEach((header, index) => {
         };
     });
 });
+
+
+//- swipe for closing menu
+const menu = document.querySelector(".navbar__items");
+// const burger = document.querySelector(".navbar__burger");
+// that variable is below
+let startX = 0;
+let endX = 0;
+
+menu.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].clientX;
+});
+
+menu.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    let diffX = endX - startX;
+
+    if (diffX > 50) {
+        menu.classList.remove("active");
+        burger.classList.remove("active");
+    }
+}
 
