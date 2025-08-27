@@ -200,11 +200,16 @@ section {
 }
 
 .popup {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .popup.active {
-  display: block;
   position: fixed;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   top: 0;
   left: 0;
   width: 100vw;
@@ -220,13 +225,17 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  transform: translate(-50%, -60%) scale(0.95);
+  transition: transform 0.3s ease-in-out;
+}
+.popup.active .popup__wrapper {
+  transform: translate(-50%, -50%) scale(1);
 }
 .popup__title {
   font-size: 24px;

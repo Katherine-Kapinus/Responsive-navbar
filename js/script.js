@@ -85,7 +85,15 @@ buttonOpenModal.addEventListener('click', () => {
     popup.classList.add('active');
     document.body.classList.add('no-scroll');
 })
+
 buttonCloseModal.addEventListener('click', () => {
     popup.classList.remove('active');
     document.body.classList.remove('no-scroll');
 })
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+    // клікнули саме по бекдропу
+        popup.classList.remove("active");
+        document.body.classList.remove('no-scroll');
+    }
+});
