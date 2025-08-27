@@ -51,7 +51,7 @@ accordionHeader.forEach((header, index) => {
 
 //- swipe for closing menu
 const menu = document.querySelector(".navbar__items");
-const burger = document.querySelector(".navbar__burger");
+// const burger = document.querySelector(".navbar__burger");
 // that variable is below
 let startX = 0;
 let endX = 0;
