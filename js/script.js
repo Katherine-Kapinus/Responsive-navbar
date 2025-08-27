@@ -51,7 +51,7 @@ accordionHeader.forEach((header, index) => {
 
 //- swipe for closing menu
 const menu = document.querySelector(".navbar__items");
-// const burger = document.querySelector(".navbar__burger");
+const burger = document.querySelector(".navbar__burger");
 // that variable is below
 let startX = 0;
 let endX = 0;
@@ -60,20 +60,16 @@ menu.addEventListener("touchstart", (e) => {
     startX = e.changedTouches[0].clientX;
 }, { passive: true });
 
+
 menu.addEventListener("touchend", (e) => {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-}, { passive: true });
-
-function handleSwipe() {
+    let endX = e.changedTouches[0].clientX;
     let diffX = endX - startX;
-
     if (diffX > 50) {
         menu.classList.remove("active");
         burger.classList.remove("active");
-        document.body.classList.remove("no-scroll"); // <--- важливо
+        document.body.classList.remove("no-scroll");
     }
-}
+}, { passive: true });
 
 
 //- popup
