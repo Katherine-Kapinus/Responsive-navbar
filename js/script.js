@@ -71,6 +71,7 @@ function handleSwipe() {
     if (diffX > 50) {
         menu.classList.remove("active");
         burger.classList.remove("active");
+        document.body.classList.remove("no-scroll"); // <--- важливо
     }
 }
 
