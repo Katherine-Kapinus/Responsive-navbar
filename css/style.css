@@ -176,6 +176,115 @@ section {
   font-weight: 600;
   margin-bottom: 8px;
 }
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal__button {
+  background-color: #d1b16f;
+  padding: 14px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  font-weight: 500;
+}
+.modal__button:hover {
+  scale: 1.02;
+  background-color: rgba(209, 176, 111, 0.7058823529);
+}
+.modal__button:active {
+  scale: 0.98;
+}
+
+.popup {
+  display: none;
+}
+.popup.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup__wrapper {
+  background-color: white;
+  width: 500px;
+  max-width: 90%;
+  padding: 30px 20px;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.popup__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 400px) {
+  .popup__title {
+    font-size: 20px;
+  }
+}
+.popup__text {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 6px;
+  line-height: 1.2;
+  text-align: center;
+}
+.popup__text::-webkit-scrollbar {
+  width: 8px;
+}
+.popup__text::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.popup__text::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 4px;
+}
+@media (max-width: 400px) {
+  .popup__text {
+    max-height: 26vh;
+    overflow-y: auto;
+    line-height: 1.1;
+  }
+}
+.popup__button {
+  background-color: #f1e79a;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  font-weight: 500;
+}
+.popup__button:hover {
+  scale: 1.02;
+  background-color: rgba(209, 176, 111, 0.7058823529);
+}
+.popup__button:active {
+  scale: 0.98;
+}
+@media (max-width: 400px) {
+  .popup__button {
+    font-size: 16px;
+    padding: 10px 36px;
+  }
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?d6sz2t");

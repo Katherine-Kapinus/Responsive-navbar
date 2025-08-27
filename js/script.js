@@ -74,3 +74,18 @@ function handleSwipe() {
     }
 }
 
+
+//- popup
+
+let buttonOpenModal = document.querySelector('.modal__button');
+let buttonCloseModal = document.querySelector('.popup__button');
+let popup = document.querySelector('.modal__popup');
+
+buttonOpenModal.addEventListener('click', () => {
+    popup.classList.add('active');
+    document.body.classList.add('no-scroll');
+})
+buttonCloseModal.addEventListener('click', () => {
+    popup.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+})
