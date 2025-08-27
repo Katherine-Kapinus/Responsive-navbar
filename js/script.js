@@ -58,12 +58,12 @@ let endX = 0;
 
 menu.addEventListener("touchstart", (e) => {
     startX = e.changedTouches[0].clientX;
-});
+}, { passive: true });
 
 menu.addEventListener("touchend", (e) => {
     endX = e.changedTouches[0].clientX;
     handleSwipe();
-});
+}, { passive: true });
 
 function handleSwipe() {
     let diffX = endX - startX;

@@ -15,6 +15,7 @@
             transition: all 0.2s ease-in-out;
             font-size: 18px;
             font-weight: 500;
+            color: $color-main;
             &:hover{
                 scale: 1.02;
                 background-color: $color-navbar-bg-hover;
@@ -91,7 +92,7 @@
             }
             @media (max-width: 400px) {
                 max-height: 26vh; 
-                overflow-y: auto;
+                overflow-y: scroll;
                 line-height: 1.1;
             }
 		}
@@ -104,6 +105,7 @@
             transition: all 0.2s ease-in-out;
             font-size: 18px;
             font-weight: 500;
+            color: $color-main;
             &:hover{
                 scale: 1.02;
                 background-color: $color-navbar-bg-hover;

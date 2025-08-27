@@ -190,6 +190,7 @@ section {
   transition: all 0.2s ease-in-out;
   font-size: 18px;
   font-weight: 500;
+  color: #593619;
 }
 .modal__button:hover {
   scale: 1.02;
@@ -267,7 +268,7 @@ section {
 @media (max-width: 400px) {
   .popup__text {
     max-height: 26vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     line-height: 1.1;
   }
 }
@@ -279,6 +280,7 @@ section {
   transition: all 0.2s ease-in-out;
   font-size: 18px;
   font-weight: 500;
+  color: #593619;
 }
 .popup__button:hover {
   scale: 1.02;
