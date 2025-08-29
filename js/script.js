@@ -101,6 +101,7 @@ popup.addEventListener("click", (e) => {
 const sliderSlide = document.querySelector('.slider__slide');
 const sliderImages = document.querySelectorAll('.slider__slide img');
 
+
 //Buttons
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
@@ -113,22 +114,20 @@ sliderSlide.style.transform = `translateX(${-size * counter}px)`;
 
 //Button Listeners
 nextBtn.addEventListener('click', () => {
+    if(counter >= sliderImages.length - 1) return;
     sliderSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
-    console.log("counter:", counter);
     sliderSlide.style.transform = `translateX(${-size * counter}px)`;
 });
 
 prevBtn.addEventListener('click', () => {
+    if(counter < 0) return;
     sliderSlide.style.transition = "transform 0.4s ease-in-out";
     counter--;
-    console.log("counter:", counter);
     sliderSlide.style.transform = `translateX(${-size * counter}px)`;
 });
 
 sliderSlide.addEventListener('transitionend', () => {
-    console.log("id:", sliderImages[counter]?.id);
-    console.log(sliderImages[counter]);
     if(sliderImages[counter].id === 'lastClone'){
         sliderSlide.style.transition = "none";
         counter = sliderImages.length - 2;

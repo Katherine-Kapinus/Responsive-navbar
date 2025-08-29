@@ -299,7 +299,7 @@ section {
 .slider__wrapper {
   width: 90%;
   margin: auto;
-  border: 5px solid rgb(62, 82, 237);
+  overflow: hidden;
 }
 .slider__slide {
   display: flex;
