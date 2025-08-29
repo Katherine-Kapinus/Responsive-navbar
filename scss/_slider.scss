@@ -1,17 +1,24 @@
 .slider {
 
-		&__container {
-            width: 60%;
-            overflow: hidden;
+		&__wrapper {
+            width: 90%;
+			margin: auto;
+            // overflow: hidden;
+			border: 5px solid rgb(62, 82, 237);
 		}
-
+        
 		&__slide {
             display: flex;
             width: 100%;
             height: 500px;
+			
 		}
-
+		
 		&__image {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+
 		}
 
 		&__button {

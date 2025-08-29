@@ -296,14 +296,21 @@ section {
   }
 }
 
-.slider__container {
-  width: 60%;
-  overflow: hidden;
+.slider__wrapper {
+  width: 90%;
+  margin: auto;
+  border: 5px solid rgb(62, 82, 237);
 }
 .slider__slide {
   display: flex;
   width: 100%;
   height: 500px;
+}
+.slider__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 @font-face {
   font-family: "icomoon";

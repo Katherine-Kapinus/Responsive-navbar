@@ -94,3 +94,34 @@ popup.addEventListener("click", (e) => {
         document.body.classList.remove('no-scroll');
     }
 });
+
+
+//- slider
+
+const sliderSlide = document.querySelector('.slider__slide');
+const sliderImage = document.querySelectorAll('.slider__slide img');
+
+//Buttons
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+//Counter
+let counter = 1;
+const size = sliderImage[0].clientWidth;
+
+sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+
+//Button Listeners
+nextBtn.addEventListener('click', () =>{
+    sliderSlide.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    console.log(counter);
+    sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+});
+
+prevBtn.addEventListener('click', () =>{
+    sliderSlide.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    console.log(counter);
+    sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+});
