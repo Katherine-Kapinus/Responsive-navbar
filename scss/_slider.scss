@@ -1,10 +1,17 @@
 .slider {
+	position: relative;
+	z-index: 1;
+
+		&__container {
+			position: relative;
+			padding-bottom: 20px;
+		}
 
 		&__wrapper {
+			position: relative;
             width: 90%;
 			margin: auto;
             overflow: hidden;
-			// border: 5px solid rgb(62, 82, 237);
 		}
         
 		&__slide {
@@ -22,5 +29,22 @@
 		}
 
 		&__button {
+			position: absolute;
+			top: 50%;
+			background-color: transparent;
+			color: #ffffff;
+			padding: 10px 15px;
+			cursor: pointer;
+			z-index: 10; // щоб не перекривалося картинками
+			font-size: 32px;
+			width: 50px;
+			height: 50px;
+			&.prew {
+				left: 10%;
+				transform: rotate(180deg);
+			}
+			&.next {
+				right: 10%;
+			}
 		}
 }

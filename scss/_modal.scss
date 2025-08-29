@@ -1,4 +1,6 @@
 .modal {
+    position: relative;
+    z-index: 2;
 
 		&__container {
 		display: flex;
@@ -32,6 +34,7 @@
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     &.active {
         position: fixed;
+        z-index: 10;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;

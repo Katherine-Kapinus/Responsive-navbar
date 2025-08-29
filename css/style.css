@@ -176,6 +176,10 @@ section {
   font-weight: 600;
   margin-bottom: 8px;
 }
+.modal {
+  position: relative;
+  z-index: 2;
+}
 .modal__container {
   display: flex;
   flex-direction: column;
@@ -208,6 +212,7 @@ section {
 }
 .popup.active {
   position: fixed;
+  z-index: 10;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -296,7 +301,16 @@ section {
   }
 }
 
+.slider {
+  position: relative;
+  z-index: 1;
+}
+.slider__container {
+  position: relative;
+  padding-bottom: 20px;
+}
 .slider__wrapper {
+  position: relative;
   width: 90%;
   margin: auto;
   overflow: hidden;
@@ -313,6 +327,26 @@ section {
   width: 100%;
   height: 100%;
 }
+.slider__button {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+}
+.slider__button.prew {
+  left: 10%;
+  transform: rotate(180deg);
+}
+.slider__button.next {
+  right: 10%;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?d6sz2t");
@@ -340,6 +374,18 @@ section {
 
 .icon-cross:before {
   content: "\ea0f";
+}
+
+.icon-arrow-right:before {
+  content: "\ea34";
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+.icon-circle-right:before {
+  content: "\ea42";
 }
 
 body {

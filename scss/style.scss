@@ -33,13 +33,22 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 .icon-plus:before {
 	content: "\ea0a";
 }
 .icon-cross:before {
 	content: "\ea0f";
 }
+.icon-arrow-right:before {
+	content: "\ea34";
+}
+.icon-arrow-right2:before {
+	content: "\ea3c";
+}
+.icon-circle-right:before {
+	content: "\ea42";
+}
+
 
 // -------------------
 
