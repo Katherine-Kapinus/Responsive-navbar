@@ -99,7 +99,7 @@ popup.addEventListener("click", (e) => {
 //- slider
 
 const sliderSlide = document.querySelector('.slider__slide');
-const sliderImage = document.querySelectorAll('.slider__slide img');
+const sliderImages = document.querySelectorAll('.slider__slide img');
 
 //Buttons
 const prevBtn = document.querySelector('#prevBtn');
@@ -107,21 +107,36 @@ const nextBtn = document.querySelector('#nextBtn');
 
 //Counter
 let counter = 1;
-const size = sliderImage[0].clientWidth;
+const size = sliderImages[0].clientWidth;
 
 sliderSlide.style.transform = `translateX(${-size * counter}px)`;
 
 //Button Listeners
-nextBtn.addEventListener('click', () =>{
+nextBtn.addEventListener('click', () => {
     sliderSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
-    console.log(counter);
+    console.log("counter:", counter);
     sliderSlide.style.transform = `translateX(${-size * counter}px)`;
 });
 
-prevBtn.addEventListener('click', () =>{
+prevBtn.addEventListener('click', () => {
     sliderSlide.style.transition = "transform 0.4s ease-in-out";
     counter--;
-    console.log(counter);
+    console.log("counter:", counter);
     sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+});
+
+sliderSlide.addEventListener('transitionend', () => {
+    console.log("id:", sliderImages[counter]?.id);
+    console.log(sliderImages[counter]);
+    if(sliderImages[counter].id === 'lastClone'){
+        sliderSlide.style.transition = "none";
+        counter = sliderImages.length - 2;
+        sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+    }
+    if(sliderImages[counter].id === 'firstClone'){
+        sliderSlide.style.transition = "none";
+        counter = sliderImages.length - counter;
+        sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+    }
 });
