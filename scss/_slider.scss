@@ -29,11 +29,17 @@
 
 		}
         
-		&__slide {
+		&__track {
             display: flex;
             width: 100%;
             height: 500px;
-			transition: transform 0.4s ease-in-out;
+			// transition: transform 0.4s ease-in-out;
+		}
+		
+		&__slide {
+			min-width: 100%;
+			height: 100%;
+			transition: transform 0.5s ease-in-out;
 		}
 		
 		&__image {
@@ -55,6 +61,7 @@
 			width: 50px;
 			height: 50px;
 			cursor: pointer;
+			touch-action: manipulation;
 			&.prew {
 				left: 10%;
 				transform: rotate(180deg);
