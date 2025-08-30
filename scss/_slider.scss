@@ -1,10 +1,23 @@
 .slider {
 	position: relative;
 	z-index: 1;
+	background-color: $color-bg-2;
 
 		&__container {
 			position: relative;
-			padding-bottom: 20px;
+			padding-top: 14px;
+			padding-bottom: 34px;
+
+		}
+		&__title {
+			font-size: 24px;
+			font-weight: 600;
+			padding: 16px 0 20px 0;
+			text-align: center;
+
+			@media (max-width: 400px) {
+				font-size: 20px;
+			}
 		}
 
 		&__wrapper {
@@ -12,6 +25,8 @@
             width: 90%;
 			margin: auto;
             overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 		}
         
 		&__slide {
@@ -39,12 +54,23 @@
 			font-size: 32px;
 			width: 50px;
 			height: 50px;
+			cursor: pointer;
 			&.prew {
 				left: 10%;
 				transform: rotate(180deg);
 			}
 			&.next {
 				right: 10%;
+			}
+			@media (max-width: 600px) {
+				font-size: 24px;
+
+				&.prew {
+					left: 8%;
+				}
+				&.next {
+					right: 8%;
+				}
 			}
 		}
 }

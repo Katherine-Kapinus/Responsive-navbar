@@ -186,6 +186,16 @@ section {
   justify-content: center;
   align-items: center;
 }
+.modal__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+@media (max-width: 400px) {
+  .modal__title {
+    font-size: 20px;
+  }
+}
 .modal__button {
   background-color: #d1b16f;
   padding: 14px 20px;
@@ -304,16 +314,30 @@ section {
 .slider {
   position: relative;
   z-index: 1;
+  background-color: #f8f4b6;
 }
 .slider__container {
   position: relative;
-  padding-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 34px;
+}
+.slider__title {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 16px 0 20px 0;
+  text-align: center;
+}
+@media (max-width: 400px) {
+  .slider__title {
+    font-size: 20px;
+  }
 }
 .slider__wrapper {
   position: relative;
   width: 90%;
   margin: auto;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .slider__slide {
   display: flex;
@@ -338,6 +362,7 @@ section {
   font-size: 32px;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 .slider__button.prew {
   left: 10%;
@@ -345,6 +370,17 @@ section {
 }
 .slider__button.next {
   right: 10%;
+}
+@media (max-width: 600px) {
+  .slider__button {
+    font-size: 24px;
+  }
+  .slider__button.prew {
+    left: 8%;
+  }
+  .slider__button.next {
+    right: 8%;
+  }
 }
 
 @font-face {
@@ -429,7 +465,7 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 28px;
+  padding-block: 34px;
 }
 @media (max-width: 600px) {
   .header__container {
