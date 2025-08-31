@@ -98,8 +98,8 @@ popup.addEventListener("click", (e) => {
 
 //- slider
 
-const sliderSlide = document.querySelector('.slider__slide');
-const sliderImages = document.querySelectorAll('.slider__slide img');
+const sliderTrack = document.querySelector('.slider__track');
+const sliderImages = document.querySelectorAll('.slider__track .slider__slide');
 
 
 //Buttons
@@ -110,32 +110,32 @@ const nextBtn = document.querySelector('#nextBtn');
 let counter = 1;
 const size = sliderImages[0].clientWidth;
 
-sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+sliderTrack.style.transform = `translateX(${-size * counter}px)`;
 
 //Button Listeners
 nextBtn.addEventListener('click', () => {
     if(counter >= sliderImages.length - 1) return;
-    sliderSlide.style.transition = "transform 0.4s ease-in-out";
+    sliderTrack.style.transition = "transform 0.4s ease-in-out";
     counter++;
-    sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+    sliderTrack.style.transform = `translateX(${-size * counter}px)`;
 });
 
 prevBtn.addEventListener('click', () => {
-    if(counter < 0) return;
-    sliderSlide.style.transition = "transform 0.4s ease-in-out";
+    if(counter <= 0) return;
+    sliderTrack.style.transition = "transform 0.4s ease-in-out";
     counter--;
-    sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+    sliderTrack.style.transform = `translateX(${-size * counter}px)`;
 });
 
-sliderSlide.addEventListener('transitionend', () => {
+sliderTrack.addEventListener('transitionend', () => {
     if(sliderImages[counter].id === 'lastClone'){
-        sliderSlide.style.transition = "none";
+        sliderTrack.style.transition = "none";
         counter = sliderImages.length - 2;
-        sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+        sliderTrack.style.transform = `translateX(${-size * counter}px)`;
     }
     if(sliderImages[counter].id === 'firstClone'){
-        sliderSlide.style.transition = "none";
+        sliderTrack.style.transition = "none";
         counter = sliderImages.length - counter;
-        sliderSlide.style.transform = `translateX(${-size * counter}px)`;
+        sliderTrack.style.transform = `translateX(${-size * counter}px)`;
     }
 });
