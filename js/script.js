@@ -150,24 +150,32 @@ sliderTrack.addEventListener('transitionend', () => {
     }
 });
 
-//- block gorisontal scroll
-// let startX = 0;
-let startY = 0;
 
+//- swipe for slider
+let touchStartX = 0;
+let touchEndX = 0;
 sliderTrack.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
+    touchStartX = e.changedTouches[0].clientX;
 }, { passive: true });
 
 sliderTrack.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    const endY = e.changedTouches[0].clientY;
-    const diffX = endX - startX;
-    const diffY = endY - startY;
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+}, { passive: true }); 
 
-    // якщо свайп горизонтальний і достатньо довгий
-    if (Math.abs(diffX) > 30 && Math.abs(diffX) > Math.abs(diffY)) {
-        e.preventDefault(); // блокуємо браузерну реакцію
-        // тут нічого не робимо, просто свайп
+function handleSwipe() {
+    let diffX = touchEndX - touchStartX;
+    if (diffX > 50) {
+        // swipe right  
+        if(counter <= 0) return;
+        sliderTrack.style.transition = "transform 0.4s ease-in-out";
+        counter--;
+        sliderTrack.style.transform = `translateX(${-size * counter}px)`;
+    } else if (diffX < -50) {
+        // swipe left
+        if(counter >= sliderImages.length - 1) return;
+        sliderTrack.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        sliderTrack.style.transform = `translateX(${-size * counter}px)`;
     }
-});
+}
