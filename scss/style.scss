@@ -175,7 +175,7 @@ body{
 		&__items {
 			display: flex;
 			column-gap: 40px;
-			transition: all 0.5s ease-in-out;
+			transition: transform 0.5s ease-in-out;
 			@media (max-width: 900px) {
 				column-gap: 32px;
 			}
