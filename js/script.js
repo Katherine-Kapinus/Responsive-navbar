@@ -1,11 +1,44 @@
 //- burger icon animation
 const burger = document.querySelector('.navbar__burger');
-const items = document.querySelector('.navbar__items');   
+const menu = document.querySelector(".navbar__items");
 burger.addEventListener('click', () => {
     burger.classList.toggle('active');
-    items.classList.toggle('active');
+    menu.classList.toggle('active');
     document.body.classList.toggle('no-scroll');
 });
+
+//- swipe for closing menu
+// const burger = document.querySelector(".navbar__burger");
+// const menu = document.querySelector(".navbar__items");
+// that variables is above
+let startX = 0;
+let endX = 0;
+
+menu.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].clientX;
+}, { passive: true });
+
+menu.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+    let diffX = endX - startX;
+    if (diffX > 50) {
+        menu.classList.remove("active");
+        burger.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+    }
+}, { passive: true });
+
+//- close menu on link click
+let menuLinks = document.querySelectorAll('.navbar__link');
+console.log(menuLinks);
+menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        burger.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    })
+});     
+
 
 
 //- tabs logic
@@ -47,29 +80,6 @@ accordionHeader.forEach((header, index) => {
         };
     });
 });
-
-
-//- swipe for closing menu
-const menu = document.querySelector(".navbar__items");
-// const burger = document.querySelector(".navbar__burger");
-// that variable is below
-let startX = 0;
-let endX = 0;
-
-menu.addEventListener("touchstart", (e) => {
-    startX = e.changedTouches[0].clientX;
-}, { passive: true });
-
-
-menu.addEventListener("touchend", (e) => {
-    let endX = e.changedTouches[0].clientX;
-    let diffX = endX - startX;
-    if (diffX > 50) {
-        menu.classList.remove("active");
-        burger.classList.remove("active");
-        document.body.classList.remove("no-scroll");
-    }
-}, { passive: true });
 
 
 //- popup

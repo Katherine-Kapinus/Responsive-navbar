@@ -429,6 +429,10 @@ section {
   content: "\ea42";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgba(247, 250, 206, 0.5215686275);
   color: #593619;
@@ -580,7 +584,6 @@ body.no-scroll {
 }
 .navbar__link:active {
   scale: 0.98;
-  color: #73a613;
 }
 
 .main__container {

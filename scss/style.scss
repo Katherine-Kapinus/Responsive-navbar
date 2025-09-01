@@ -54,6 +54,10 @@
 
 
 //- general styles
+html {
+	scroll-behavior: smooth;
+}
+
 body{
     background-color: $color-bg;
 	color: $color-main;
@@ -207,7 +211,6 @@ body{
 			}
 			&:active{
 				scale: 0.98;
-				color: $color-accent;
 			}
 		}
 }
