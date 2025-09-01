@@ -58,10 +58,13 @@ html {
 	scroll-behavior: smooth;
 }
 
+
 body{
     background-color: $color-bg;
 	color: $color-main;
 	font-family: 'Nata Sans', sans-serif;
+	touch-action: pan-y; /* дозволяє вертикальну прокрутку, блокує горизонтальні свайпи */
+  	-ms-touch-action: pan-y; /* для IE/Edge */
 	&.no-scroll {
 	overflow: hidden;
 	}

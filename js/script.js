@@ -149,3 +149,25 @@ sliderTrack.addEventListener('transitionend', () => {
         sliderTrack.style.transform = `translateX(${-size * counter}px)`;
     }
 });
+
+//- block gorisontal scroll
+// let startX = 0;
+let startY = 0;
+
+sliderTrack.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+}, { passive: true });
+
+sliderTrack.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    const diffX = endX - startX;
+    const diffY = endY - startY;
+
+    // якщо свайп горизонтальний і достатньо довгий
+    if (Math.abs(diffX) > 30 && Math.abs(diffX) > Math.abs(diffY)) {
+        e.preventDefault(); // блокуємо браузерну реакцію
+        // тут нічого не робимо, просто свайп
+    }
+});
